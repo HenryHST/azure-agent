@@ -11,10 +11,10 @@ var_cpu="${var_cpu:-2}"
 var_ram="${var_ram:-4096}"
 var_disk="${var_disk:-30}"
 var_os="${var_os:-ubuntu}"
-var_user="${var_user:-agent}"
 var_version="${var_version:-24.04}"
 var_unprivileged="${var_unprivileged:-1}"
-var_workdir="${var_workdir:-azp}"
+#var_workdir="${var_workdir:-azp}"
+#var_user="${var_user:-agent}"
 
 header_info "$APP"
 variables

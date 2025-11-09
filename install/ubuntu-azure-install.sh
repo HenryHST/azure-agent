@@ -24,11 +24,10 @@ $STD mkdir myagent && cd myagent
 $STD wget https://download.agent.dev.azure.com/agent/4.261.0/vsts-agent-linux-x64-4.261.0.tar.gz
 $STD tar zxvf vsts-agent-linux-x64-4.261.0.tar.gz
 $STD rm -rf vsts-agent-linux-x64-4.261.0.tar.gz
-$STD useradd -m -u 1000 -d /home/${var_user} ${var_user} && \
-    usermod -aG docker ${var_user} && \
-    chown -R ${var_user}:${var_user} ${var_workdir} /home/${var_user} && \
-    echo "${var_user} ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${var_user}-nopasswd && \
-    chmod 0440 /etc/sudoers.d/${var_user}-nopasswd
+$STD useradd -m -u 1000 -d /home/agent agent && \
+    chown -R agent:agent /home/agent && \
+    echo "agent ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/agent -nopasswd && \
+    chmod 0440 /etc/sudoers.d/agent -nopasswd
 
 
 motd_ssh

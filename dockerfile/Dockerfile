@@ -41,8 +41,8 @@ RUN apt update && \
   
 WORKDIR ${WORKDIR}
   
-COPY daemon.json /etc/docker/
-COPY start.sh entrypoint.sh dockerd.sh buildkitd.toml job-checker.sh ${WORKDIR}/
+COPY dockerfile/daemon.json /etc/docker/
+COPY dockerfile/start.sh dockerfile/entrypoint.sh dockerfile/dockerd.sh dockerfile/buildkitd.toml dockerfile/job-checker.sh ${WORKDIR}/
 RUN chmod +x start.sh entrypoint.sh dockerd.sh job-checker.sh
   
 RUN useradd -m -u 1000 -d /home/${USER} ${USER} && \

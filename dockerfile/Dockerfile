@@ -1,10 +1,24 @@
 FROM ubuntu:22.04
 
 ARG TARGETARCH
+ARG VERSION
+ARG GIT_BUILD_HASH
+ENV GIT_BUILD_HASH=$GIT_BUILD_HASH
 ENV TARGETARCH="linux-${TARGETARCH}"
 ENV container=docker
 ENV USER=agent
 ENV WORKDIR=/azp
+
+LABEL org.opencontainers.image.authors="Henry Stadthagen" \
+    org.opencontainers.image.source="https://github.com/henrhst/authentik" \
+    org.opencontainers.image.description="azure build agent for selfhost,  for more info." \
+    org.opencontainers.image.licenses="https://github.com/HenryHST/azure-agent/blob/main/LICENSE" \
+    org.opencontainers.image.revision=${GIT_BUILD_HASH} \
+    org.opencontainers.image.source="https://github.com/HenryHST/azure-agent" \
+    org.opencontainers.image.title="azure build agent image" \
+    org.opencontainers.image.url="https://henrystadthagen.de" \
+    org.opencontainers.image.vendor="h.stadthagen@me.com" \
+    org.opencontainers.image.version=${VERSION}
   
 RUN apt update && \
     apt install ca-certificates curl -y --no-install-recommends && \

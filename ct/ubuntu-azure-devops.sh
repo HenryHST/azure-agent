@@ -6,7 +6,7 @@ source <(curl -fsSL https://raw.githubusercontent.com/HenryHST/azure-agent/main/
 # Source: https://ubuntu.com/
 
 APP="Ubuntu-Azure"
-var_tags="${var_tags:-os}"
+var_tags="${var_tags:-azure-devops}"
 var_cpu="${var_cpu:-2}"
 var_ram="${var_ram:-4096}"
 var_disk="${var_disk:-30}"

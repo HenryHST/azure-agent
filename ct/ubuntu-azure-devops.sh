@@ -5,7 +5,7 @@ source <(curl -fsSL https://raw.githubusercontent.com/HenryHST/azure-agent/main/
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://ubuntu.com/
 
-APP="Ubuntu-Azure-DevOps"
+APP="Ubuntu-Azure"
 var_tags="${var_tags:-os}"
 var_cpu="${var_cpu:-2}"
 var_ram="${var_ram:-4096}"

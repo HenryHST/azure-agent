@@ -30,8 +30,12 @@ jobs:
           VALIDATE_DOCKERFILE_HADOLINT: false
           VALIDATE_BASH: false
           VALIDATE_BASH_EXEC: false
+          # set BIOME_FORMAT to 
+          VALIDATE_BIOME_FORMAT: false
           VALIDATE_CSS: false
           VALIDATE_CSS_PRETTIER: false
+          # set GITHUB_ACTIONS_ZIZMOR to
+          VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
           VALIDATE_CHECKOV: false 
           # set checkov
           VALIDATE_JAVASCRIPT_PRETTIER: false
@@ -44,6 +48,8 @@ jobs:
           VALIDATE_SHELL_SHFMT: false
           # install package 'prettier-plugin-astro issue #38
           VALIDATE_JSON_PRETTIER: false
+          # extra trivy workflow 
+          VALIDATE_TRIVY: false
           VALIDATE_TSX: false
           # install package 'prettier-plugin-astro issue #38
           VALIDATE_TYPESCRIPT_PRETTIER: false

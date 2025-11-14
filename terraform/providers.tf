@@ -1,17 +1,15 @@
 terraform {
   required_providers {
-    azurerm = {
+    azuredevops = {
       source  = "microsoft/azuredevops"
-      version = "1.11.2"
+      version = ">=0.1.0"
     }
-    
+
   }
-  required_version = ">= 1.13.4"
+  required_version = ">= 1.5.7"
 }
 
 provider "azuredevops" {
-  org_service_url = "https://dev.azure.com/my-org"
-  client_id     = "00000000-0000-0000-0000-000000000001"
-  tenant_id     = "00000000-0000-0000-0000-000000000001"
-  client_secret = "top-secret-password-string"
+  org_service_url = var.org_service_url
+  personal_access_token   = var.token
 }

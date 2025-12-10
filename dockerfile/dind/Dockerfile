@@ -30,10 +30,10 @@ RUN echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
   
-RUN apt update && \
+RUN DEBIAN_FRONTEND=noninteractive apt update && \
     apt upgrade -y && \
-    apt install -y --no-install-recommends \
-    sudo git jq libicu70 unzip gnupg software-properties-common \
+    DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
+    ca-certificates curl sudo git jq libicu70 unzip gnupg software-properties-common \
     docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && \
     apt clean && \
     rm -rf /tmp/* && \

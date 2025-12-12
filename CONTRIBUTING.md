@@ -1,6 +1,6 @@
-# Contributing to DevOps AI Toolkit
+# Contributing to Azure Agent
 
-Thank you for your interest in contributing to DevOps AI Toolkit! We welcome contributions from the community.
+Thank you for your interest in contributing to Azure Agent! We welcome contributions from the community.
 
 ## Table of Contents
 

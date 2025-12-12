@@ -18,7 +18,7 @@ Thank you for contributing to DevOps AI Toolkit! Please fill out this template t
 ## Type of Change
 <!-- Check all that apply -->
 
-- [ ] 🐛 Bug fix (non-breaking change that fixes an issue)
+- [ ] 🐛 bugfix (non-breaking change that fixes an issue)
 - [ ] ✨ New feature (non-breaking change that adds functionality)
 - [ ] 💥 Breaking change (fix or feature that would cause existing functionality to change)
 - [ ] 📚 Documentation update
@@ -46,7 +46,7 @@ Examples:
 
 **Common types:**
 - `feat:` - New feature (minor version bump)
-- `fix:` - Bug fix (patch version bump)
+- `fix:` - bugfix (patch version bump)
 - `docs:` - Documentation changes
 - `refactor:` - Code refactoring (no functional changes)
 - `test:` - Adding/updating tests

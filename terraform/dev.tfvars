@@ -1,0 +1,5 @@
+azure_subscription_id = ""
+environment           = "dev"
+common_name           = "network"
+location              = "westeurope"
+location_short        = "we"

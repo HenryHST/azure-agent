@@ -42,6 +42,8 @@ jobs:
           VALIDATE_ENV: false
           # set VALIDATE_GITHUB_ACTIONS true 
           VALIDATE_GITHUB_ACTIONS: false
+          #set VALIDATE_POWERSHELL: true 
+          VALIDATE_POWERSHELL: false
           VALIDATE_JSCPD: false
           VALIDATE_MARKDOWN: false
           VALIDATE_MARKDOWN_PRETTIER: false
